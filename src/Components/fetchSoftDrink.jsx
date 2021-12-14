@@ -16,7 +16,7 @@ SwiperCore.use([Pagination, Navigation]);
 
 function FetchSoftDrink() {
   const [fetchedDrink, setFetchedDrink] = useState();
-  const drinksByCalories = 'http://localhost:8000/api/softs_drinks/';
+  const drinksByCalories = 'http://localhost:8080/api/softs_drinks/';
   const { allFavorites, fetchAllFavorites } = useContext(CurrentAllFavoritesContext);
   const [refresh, setRefresh] = useState(false);
 

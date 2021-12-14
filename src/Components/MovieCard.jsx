@@ -21,7 +21,7 @@ function MovieCard({ id, title, desc, img }) {
   function AddToFavorite() {
     if (userName) {
       setIsFavorite(true);
-      axios.post('http://localhost:8000/api/favorites/movies', {
+      axios.post('http://localhost:8080/api/favorites/movies', {
         username: userName,
         itemCategory: 'movie',
         itemName: title,
@@ -36,7 +36,7 @@ function MovieCard({ id, title, desc, img }) {
 
   function DeleteFromFavorite() {
     setIsFavorite(false);
-    axios.delete(`http://localhost:8000/api/favorites/movies/${userName}/${id}`);
+    axios.delete(`http://localhost:8080/api/favorites/movies/${userName}/${id}`);
   }
 
   function handleClickFavorite() {

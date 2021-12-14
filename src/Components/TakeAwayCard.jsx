@@ -20,7 +20,7 @@ function TakeAwayCard({ name, store, portion, calories, fat, carbs, protein, img
   function AddToFavorite() {
     if (userName) {
       setIsFavorite(true);
-      axios.post('http://localhost:8000/api/favorites/food/takeaway', {
+      axios.post('http://localhost:8080/api/favorites/food/takeaway', {
         username: userName,
         itemCategory: 'takeaway',
         itemName: name,
@@ -39,7 +39,7 @@ function TakeAwayCard({ name, store, portion, calories, fat, carbs, protein, img
 
   function DeleteFromFavorite() {
     setIsFavorite(false);
-    axios.delete(`http://localhost:8000/api/favorites/food/${userName}/${name}`);
+    axios.delete(`http://localhost:8080/api/favorites/food/${userName}/${name}`);
   }
 
   function handleClickFavorite() {

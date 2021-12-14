@@ -21,7 +21,7 @@ function AlcoholDrinkCard({ name, calories, sugar, imgUrl }) {
   function AddToFavorite() {
     if (userName) {
       setIsFavorite(true);
-      axios.post('http://localhost:8000/api/favorites/drinks', {
+      axios.post('http://localhost:8080/api/favorites/drinks', {
         username: userName,
         itemCategory: 'drinks',
         itemName: name,

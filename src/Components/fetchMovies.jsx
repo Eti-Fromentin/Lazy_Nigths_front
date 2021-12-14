@@ -22,6 +22,7 @@ function FetchMovies({ torefresh, category }) {
   const randomPageHappy = getRandomInt(250);
   const randomPageBlue = getRandomInt(50);
   const callParameters = getParameters(category);
+  const key = import.meta.env.VITE_MOVIE_API_KEY;
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -47,7 +48,7 @@ function FetchMovies({ torefresh, category }) {
     fetchAllFavorites();
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=d174ca19b8b8536a5dcd5988d5132531&primary_release_date.gte=1970-01-01&with_original_language=en${callParameters}`,
+        `https://api.themoviedb.org/3/discover/movie?api_key=${key}&primary_release_date.gte=1970-01-01&with_original_language=en${callParameters}`,
       )
       .then((response) => response.data)
       .then((data) => setFetchedMovies(data.results));
