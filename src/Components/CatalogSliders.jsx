@@ -30,14 +30,14 @@ function CatalogSliders() {
   useEffect(() => {
     fetchAllFavorites();
     axios
-      .get('http://localhost:8080/api/softs_drinks/')
+      .get('https://lazy-back.site.etifrom.dev/api/softs_drinks/')
       .then((response) => response.data)
       .then((data) => setSoftsDrinks(data));
   }, []);
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/alcohol_drinks/')
+      .get('https://lazy-back.site.etifrom.dev/api/alcohol_drinks/')
       .then((response) => response.data)
       .then((data) => setAllDrinks(softsDrinks.concat(data)));
   }, [softsDrinks]);
