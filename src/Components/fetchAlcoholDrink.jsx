@@ -15,7 +15,7 @@ SwiperCore.use([Pagination, Navigation]);
 
 function FetchAlcoholDrinks() {
   const [fetchedDrink, setFetchedDrink] = useState();
-  const drinksByCalories = 'http://localhost:8080/api/alcohol_drinks/';
+  const drinksByCalories = 'https://lazy-back.site.etifrom.dev/api/alcohol_drinks/';
   const { allFavorites, fetchAllFavorites } = useContext(CurrentAllFavoritesContext);
   const [refresh, setRefresh] = useState(false);
 

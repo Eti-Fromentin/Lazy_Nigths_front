@@ -19,7 +19,7 @@ function SoftDrinkCard({ name, calories, sugar, imgUrl }) {
   function AddToFavorite() {
     if (userName) {
       setIsFavorite(true);
-      axios.post('http://localhost:8080/api/favorites/drinks', {
+      axios.post('https://lazy-back.site.etifrom.dev/api/favorites/drinks', {
         username: userName,
         itemCategory: 'drinks',
         itemName: name,
@@ -34,7 +34,7 @@ function SoftDrinkCard({ name, calories, sugar, imgUrl }) {
 
   function DeleteFromFavorite() {
     setIsFavorite(false);
-    axios.delete(`http://localhost:8080/api/favorites/drinks/${userName}/${name}`);
+    axios.delete(`https://lazy-back.site.etifrom.dev/api/favorites/drinks/${userName}/${name}`);
   }
 
   function handleClickFavorite() {

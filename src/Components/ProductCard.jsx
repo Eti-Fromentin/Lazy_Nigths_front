@@ -26,7 +26,7 @@ function ProductCard({ product }) {
 
   function AddToFavorite() {
     if (userName) {
-      axios.post('http://localhost:8080/api/favorites/barcode', {
+      axios.post('https://lazy-back.site.etifrom.dev/api/favorites/barcode', {
         username: userName,
         itemCategory: 'barcode',
         itemName: product.product_name,
@@ -44,7 +44,7 @@ function ProductCard({ product }) {
 
   function DeleteFromFavorite() {
     setIsFavorite(false);
-    axios.delete(`http://localhost:8080/api/favorites/movies/${userName}/${product.product_name}`);
+    axios.delete(`https://lazy-back.site.etifrom.dev/api/favorites/movies/${userName}/${product.product_name}`);
   }
 
   function handleClickFavorite() {

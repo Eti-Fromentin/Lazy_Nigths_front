@@ -21,7 +21,7 @@ function RecipeCard({ image, title, calories, carbs, fat, protein, sugar }) {
   function AddToFavorite() {
     if (userName) {
       setIsFavorite(true);
-      axios.post('http://localhost:8080/api/favorites/food/recipe', {
+      axios.post('https://lazy-back.site.etifrom.dev/api/favorites/food/recipe', {
         username: userName,
         itemCategory: 'recipe',
         itemName: title,
@@ -39,7 +39,7 @@ function RecipeCard({ image, title, calories, carbs, fat, protein, sugar }) {
 
   function DeleteFromFavorite() {
     setIsFavorite(false);
-    axios.delete(`http://localhost:8080/api/favorites/food/${userName}/${title}`);
+    axios.delete(`https://lazy-back.site.etifrom.dev/api/favorites/food/${userName}/${title}`);
   }
 
   function handleClickFavorite() {

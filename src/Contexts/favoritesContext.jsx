@@ -12,7 +12,7 @@ export function CurrentAllFavoritesContextProvider({ children }) {
 
   function fetchAllFavorites() {
     axios
-      .get(`http://localhost:8000/api/favorites/`)
+      .get(`https://lazy-back.site.etifrom.dev/api/favorites/`)
       .then((response) => response.data)
       .then((data) => setAllFavorites(data));
   }

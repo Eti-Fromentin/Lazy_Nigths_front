@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 SwiperCore.use([Pagination, Navigation]);
 
 function FetchTakeAway({ category }) {
-  const BurgersByCalories = 'http://localhost:8000/api/takeaway/';
+  const BurgersByCalories = 'https://lazy-back.site.etifrom.dev/api/takeaway/';
   const [fetchedTakeAway, setFetchedTakeAway] = useState();
   const { allFavorites, fetchAllFavorites } = useContext(CurrentAllFavoritesContext);
   const [refresh, setRefresh] = useState(false);
