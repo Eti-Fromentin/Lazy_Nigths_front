@@ -2,6 +2,8 @@
 FROM node:14 as builder
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
+ARG VITE_MOVIE_API_KEY=${VITE_MOVIE_API_KEY}
+ARG VITE_RECIPE_API_KEY=${VITE_RECIPE_API_KEY}
 COPY . /usr/src/app
 RUN npm install
 RUN npm run build
